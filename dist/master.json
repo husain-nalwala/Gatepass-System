@@ -1,0 +1,18 @@
+{
+    "RequestedBy": [
+      "Warehouse",
+      "Facility",
+      "Front office",
+      "Canteen",
+      "Plant"
+      
+    ],
+    "VendorList": [
+      "HCL Computers",
+      "Tata Telecom",
+      "VRL Logistics",
+      "Amazon Services",
+      "KSL Pumps"
+    ]
+  }
+  

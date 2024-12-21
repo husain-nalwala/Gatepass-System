@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Pass</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/simple-datatables/style.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+
+    <!-- Add Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/datatables.net-bs5@2.1.0/css/dataTables.bootstrap5.min.css"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html" class="w-100 h-100"><img src="assets/images/logo/elite-logo.jpg"
+                                    class="img img-fluid w-100 h-75 p-1" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-item active" onclick="location.href='index.html';">
+                            <a href="index.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-house"></i>
+                                </div>
+                                <span>Dashboard</span>
+
+                            </a>
+                            <hr>
+                        </li>
+
+                        <li class="sidebar-item" onclick="location.href='table-datatable.html';">
+                            <a href="table-datatable.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg  fa-truck"></i>
+                                </div>
+                                <span>M-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='';">
+                            <a href="#"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-id-card"></i>
+                                </div>
+                                <span>V-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='application-gallery.html';">
+                            <a href="application-gallery.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-layer-group"></i>
+                                </div>
+                                <span>Requests</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='#';">
+                            <a href="#"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-2 fa fa-lg fa-clipboard"></i>
+                                </div>
+                                <span>Reports</span>
+                            </a>
+                            <hr>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!-- tabs -->
+            <section class="mb-3">
+                <div class="col-12">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+                            <div class="page-heading">
+                                <div class="page-title">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 order-md-1 order-last">
+                                            <h4 class="text-secondary">Requests</h4>
+                                        </div>
+
+                                        <div class="col-12 col-md-6 order-md-2 order-first">
+                                            <nav aria-label="breadcrumb"
+                                                class="breadcrumb-header float-start float-lg-end">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item active" aria-current="page">
+                                                        Requests</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <section class="section">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <!-- Filters Section -->
+                                            <!-- <div class="filter-section mb-3">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label for="filterStatus">Status</label>
+                                                            <select id="filterStatus" class="form-select">
+                                                                <option value="">All</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="filterPasstype">Passtype</label>
+                                                            <select id="filterPasstype" class="form-select">
+                                                                <option value="">All</option>
+                                                               
+                                                            
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="filterMovement">Movement</label>
+                                                            <select id="filterMovement" class="form-select">
+                                                                <option value="">All</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+
+                                            <!-- Data Table -->
+                                            <table class="table table-hover table-bordered" id="table1">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Request ID</th>
+                                                        <!-- <th>Gatepass</th> -->
+                                                        <th>Request Date</th>
+                                                        <th>Movement</th>
+                                                        <th>Type</th>
+                                                        <th>Vendor</th>
+                                                        <th>Location</th>
+                                                        <th>Delivery Challan</th>
+                                                        <th>Invoice</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Data rows will be dynamically inserted here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- Include your JS and DataTable Libraries -->
+                                <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+                                <script src="assets/js/bootstrap.bundle.min.js"></script>
+                                <script src="assets/vendors/simple-datatables/simple-datatables.js"></script>
+
+                                <script>
+                                    // Function to populate the table and initialize DataTable
+                                    function populateTable(data) {
+                                        const tableBody = document.querySelector('#table1 tbody');
+                                        tableBody.innerHTML = ''; // Clear existing rows
+
+                                        // Loop through the data and create table rows
+                                        data.forEach(item => {
+                                            const row = document.createElement('tr');
+
+                                            // Add data to each table cell
+                                            row.innerHTML = `
+                                                   <td>${item.RequestNo}</td>
+            <td>${item.RequestDate}</td>
+            <td>${item.Movement}</td>
+            <td>${item.Type}</td>
+            <td>${item.Vendor}</td>
+            <td>${item.Location}</td>
+            <td>${item.Deliverychallan}</td>
+            <td>${item.Invoice}</td>
+  <td>
+    <span class="badge 
+        ${item.Status === 'Pending' ? 'bg-warning' :
+                                                    item.Status === 'Approved' ? 'bg-success' :
+                                                        item.Status === 'Declined' ? 'bg-danger' : 'bg-danger'}">
+        ${item.Status}
+    </span>
+</td>
+                                                   
+                                                `;
+
+                                            tableBody.appendChild(row); // Append the row to the table body
+                                        });
+
+                                        // Initialize DataTable (once the table is populated with data)
+                                        const table = new simpleDatatables.DataTable('#table1', {
+                                            perPage: 25,               // Number of rows per page
+                                            perPageSelect: [25, 50, 75, 100], // Dropdown to select per page options
+                                            searchable: true,         // Enable search box
+                                            sortable: true,           // Enable sorting on columns
+                                            fixedHeight: true         // Set fixed height for the table
+                                        });
+                                    }
+
+                                    // Function to apply filters and update the table
+                                    function applyFilters(data) {
+                                        const statusFilter = document.getElementById('filterStatus').value;
+                                        const passtypeFilter = document.getElementById('filterPasstype').value;
+                                        const movementFilter = document.getElementById('filterMovement').value;
+
+                                        // Filter the data based on the selected filters
+                                        const filteredData = data.filter(item => {
+                                            return (
+                                                (statusFilter === "" || item.Status === statusFilter) &&
+                                                (passtypeFilter === "" || item.Passtype === passtypeFilter) &&
+                                                (movementFilter === "" || item.Movement === movementFilter)
+                                            );
+                                        });
+
+                                        // Populate the table with the filtered data
+                                        populateTable(filteredData);
+                                    }
+
+                                    // Function to populate filter options dynamically from JSON data
+                                    function populateFilters(data) {
+                                        // Extract unique values for each filter field
+                                        const uniqueStatuses = [...new Set(data.map(item => item.Status))];
+                                        const uniquePasstypes = [...new Set(data.map(item => item.Passtype))];
+                                        const uniqueMovements = [...new Set(data.map(item => item.Movement))];
+
+                                        // Populate the dropdowns with the unique values
+                                        const statusSelect = document.getElementById('filterStatus');
+                                        const passtypeSelect = document.getElementById('filterPasstype');
+                                        const movementSelect = document.getElementById('filterMovement');
+
+                                        // Helper function to populate dropdowns
+                                        function populateSelect(selectElement, options) {
+                                            options.forEach(option => {
+                                                const optionElement = document.createElement('option');
+                                                optionElement.value = option;
+                                                optionElement.textContent = option;
+                                                selectElement.appendChild(optionElement);
+                                            });
+                                        }
+
+                                        // Clear existing options and add a default "All" option
+                                        statusSelect.innerHTML = '<option value="">All</option>';
+                                        passtypeSelect.innerHTML = '<option value="">All</option>';
+                                        movementSelect.innerHTML = '<option value="">All</option>';
+
+                                        // Populate each select dropdown with options
+                                        populateSelect(statusSelect, uniqueStatuses);
+                                        populateSelect(passtypeSelect, uniquePasstypes);
+                                        populateSelect(movementSelect, uniqueMovements);
+                                    }
+
+                                    // Fetch data from the materialpass.json file and populate the table and filters
+                                    window.onload = () => {
+                                        fetch('data.json') // Path to your JSON file
+                                            .then(response => response.json()) // Parse the JSON data
+                                            .then(data => {
+                                                // Initially populate the table with all data
+                                                populateTable(data);
+
+                                                // Populate filters with unique values from the data
+                                                populateFilters(data);
+
+                                                // Add event listeners to dropdowns for filtering
+                                                document.getElementById('filterStatus').addEventListener('change', () => applyFilters(data));
+                                                document.getElementById('filterPasstype').addEventListener('change', () => applyFilters(data));
+                                                document.getElementById('filterMovement').addEventListener('change', () => applyFilters(data));
+                                            })
+                                            .catch(error => console.error('Error loading data:', error)); // Error handling
+                                    };
+                                </script>
+
+
+                                <style>
+                                    /* Modern Table Styles */
+                                    #table1 {
+                                        width: 100%;
+                                        border-collapse: separate;
+                                        /* Use separate for cell spacing */
+
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                    }
+
+                                    #table1 th,
+                                    #table1 td {
+                                        padding: 12px;
+                                        text-align: left;
+                                        font-size: 16px;
+                                        border: none;
+                                        /* Remove borders from cells */
+                                        text-align: center;
+                                    }
+
+                                    #table1 thead {
+                                        background-color: #435ebe;
+                                        color: white;
+                                    }
+
+                                    #table1 thead th {
+                                        font-weight: bold;
+                                        letter-spacing: 0.5px;
+                                    }
+
+                                    #table1 tbody tr:nth-child(even) {
+                                        background-color: #f9f9f9;
+                                    }
+
+                                    #table1 tbody tr:hover {
+                                        background-color: #f1f1f1;
+                                        transition: background-color 0.3s ease;
+                                    }
+
+                                    /* Button Styles */
+                                    .btn {
+                                        padding: 6px 12px;
+                                        font-size: 14px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                        border: 1px solid transparent;
+                                        transition: background-color 0.3s ease, border-color 0.3s ease;
+                                    }
+
+                                    .btn-outline-primary {
+                                        border: 1px solid #007bff;
+                                        color: #007bff;
+                                    }
+
+                                    .btn-outline-primary:hover {
+                                        background-color: #007bff;
+                                        color: white;
+                                        border-color: #007bff;
+                                    }
+
+                                    .btn-outline-danger {
+                                        border: 1px solid #dc3545;
+                                        color: #dc3545;
+                                    }
+
+                                    .btn-outline-danger:hover {
+                                        background-color: #dc3545;
+                                        color: white;
+                                        border-color: #dc3545;
+                                    }
+
+                                    .btn-outline-info {
+                                        border: 1px solid #0dcaf0;
+                                        color: #0dcaf0;
+                                    }
+
+                                    .btn-outline-info:hover {
+                                        background-color: #0dcaf0;
+                                        color: white;
+                                        border-color: #0dcaf0;
+                                    }
+
+                                    /* Additional Styles for Responsiveness */
+                                    @media screen and (max-width: 768px) {
+
+                                        #table1 th,
+                                        #table1 td {
+                                            font-size: 14px;
+                                            padding: 8px;
+                                        }
+
+                                        .btn {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                </style>
+
+                                <!-- jQuery (CDN) -->
+                                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                                <!-- DataTables JS (CDN) -->
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/datatables.net@1.13.1/js/jquery.dataTables.min.js"></script>
+                                <script
+                                    src="https://cdn.jsdelivr.net/npm/datatables.net-bs5@2.1.0/js/dataTables.bootstrap5.min.js"></script>
+                                <script src="assets/js/main.js"></script>
+</body>
+
+</html>

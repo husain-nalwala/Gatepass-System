@@ -1,0 +1,16 @@
+{
+    "category": [
+      { "value": "A", "label": "Returnable" },
+      { "value": "B", "label": "Non Returnable" }
+    ],
+    "modeOfTransport": [
+      { "value": "Road", "label": "Vehicle" },
+      { "value": "Rail", "label": "Hand" }
+      
+    ],
+    "requestedBy": [
+      { "value": "John", "label": "Store" },
+      { "value": "Jane", "label": "Plant" }
+    ]
+  }
+  

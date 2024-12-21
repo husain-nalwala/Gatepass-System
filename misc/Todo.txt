@@ -1,0 +1,39 @@
+To-Do:
+
+
+Workflow for inward:
+User create request for inward movement
+provides PO number
+
+
+Material Pass tab :
+Create Mpass button => send form data to materialpass.json upon clicking submit. Show pass request in Requests tab.
+Create Outward material pass form
+Add content for Pending, approved  declined and expired.
+
+Requests tab: 
+Fetch pass from form and show in table.
+
+
+=======================
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all the sidebar items
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+    // Get the current URL
+    const currentUrl = window.location.href;
+
+    // Loop through each sidebar item
+    sidebarItems.forEach(function (item) {
+        const link = item.querySelector('a'); // Get the anchor element inside the list item
+        if (link && currentUrl.includes(link.getAttribute('href'))) {
+            // If the href matches the current URL, add the active class
+            item.classList.add('active');
+        
+        } else {
+            // Remove the active class for other items
+            item.classList.remove('active');
+        }
+    });
+});
+

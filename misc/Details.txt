@@ -1,0 +1,4 @@
+Material pass page (table-datatable.html) fetches data from materialpass.json
+
+Requests page (application-gallery.html) fetches data from data.json
+

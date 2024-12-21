@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatepass Form</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <!-- Add Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html" class="w-100 h-100"><img src="assets/images/logo/logos.png" class="img img-fluid w-100 h-75 p-1" alt="Logo" srcset=""></a>                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-item active" onclick="location.href='index.html';">
+                            <a href="index.html" class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-house"></i>
+                                </div>
+                                <span>Dashboard</span>
+                                
+                            </a>
+                            <hr>
+                        </li>
+
+                        <li class="sidebar-item" onclick="location.href='table-datatable.html';">
+                            <a href="table-datatable.html" class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg  fa-truck"></i>
+                                </div>
+                                <span>M-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='#';">
+                            <a href="#" class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-id-card"></i>
+                                </div>
+                                <span>V-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='application-gallery.html';">
+                            <a href="application-gallery.html" class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-layer-group"></i>
+                                </div>
+                                <span>Requests</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='#';">
+                            <a href="#" class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-circle-question"></i>
+                                </div>
+                                <span>Support</span>
+                            </a>
+                            <hr>
+                        </li>
+
+                        <!-- <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Components</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="component-alert.html">Alert</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-badge.html">Badge</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-breadcrumb.html">Breadcrumb</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-button.html">Button</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-card.html">Card</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-carousel.html">Carousel</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-dropdown.html">Dropdown</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-list-group.html">List Group</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-modal.html">Modal</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-navs.html">Navs</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-pagination.html">Pagination</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-progress.html">Progress</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-spinner.html">Spinner</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-tooltip.html">Tooltip</a>
+                                </li>
+                            </ul>
+                        </li> -->
+
+
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+
+                        <div class="col-12 col-md-12 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Material pass</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="cardhere ">
+
+
+                                <div class=" d-flex justify-content-between align-items-center p-0">
+                                    <h4 class="card-title mb-0 ms-2">Material Pass:<span class="badge bg-success ms-3">Inward</span><span class="badge bg-danger ms-3">Purchase Order</span></h4>
+                                    <div class="card">
+                                        <div class="card-body d-flex flex-column p-2  align-items-center">
+                                            <span id="generated-id"></span> <!-- This will display the generated ID -->
+                                            <div id="current-date" class=""></div>
+                                        </div>
+                                        <!-- This will display the current date below the Pass ID -->
+                                    </div>
+                                </div>
+
+                                <script>
+                                    
+                                </script>
+
+                                <style>
+                                    /* Styling for the pass-type container */
+                                    #pass-type {
+                                        text-align: center;
+                                        /* Center the text horizontally */
+                                        font-size: 16px;
+                                        /* Set font size for both ID and Date */
+                                    }
+
+                                    /* Styling for the generated Pass ID */
+                                    #generated-id {
+                                        font-weight: bold;
+                                        /* Make the ID bold */
+                                        display: inline-block;
+                                        /* Ensure it stays in the same line with the label */
+                                        margin-top: 5px;
+                                        /* Space between the label and the ID */
+                                    }
+
+                                    /* Styling for the Date */
+                                    #current-date {
+                                        font-size: 14px;
+                                        color: #6c757d;
+                                        /* Light gray color for the date */
+                                        display: inline-block;
+                                        /* Ensure the date is on its own line */
+                                        margin-top: 8px;
+                                        /* Space between the Pass ID and the Date */
+                                    }
+                                </style>
+
+
+
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form">
+                                            <div class="row">
+                                                <!-- incoming outgoing radio -->
+                                                <!-- <div class="col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Pass type: </label>
+                                                        <input class="form-check-input ms-2" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault1" />
+                                                        <label class="form-check-label" for="flexRadioDefault1">Incoming</label>
+
+                                                        <input class="form-check-input ms-2" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault2" />
+                                                        <label class="form-check-label" for="flexRadioDefault2">Outgoing</label>
+                                                    </div>
+                                                </div> -->
+
+                                                <div class="card">
+                                                    <div class="card-header p-3 ms-2">
+                                                        Basic details 
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row gy-3">
+
+                                                            <!-- category dropdown -->
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="">
+                                                                    <label for="category" class="form-label font-extrabold text-primary ">Movement</label>
+                                                                    <select class="form-select " id="category" required>
+                                                                        <option value="" disabled selected>Select material movement
+                                                                        </option>
+                                                                        <option value="A">Returnable
+                                                                        </option>
+                                                                        <option value="B">Non Returnable
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="">
+                                                                    <label for="country-floating" class="form-label font-extrabold text-primary">Vehicle No.</label>
+                                                                    <input type="text" id="country-floating"
+                                                                        class="form-control" name="country-floating"
+                                                                        >
+                                                                </div>
+                                                            </div>
+
+
+                                                            
+
+                                                                <!-- Expected Delivery Field -->
+                                                            <div class="col-md-6 col-12">
+                                                                <label for="company-column" class="form-label font-extrabold text-primary d-block mb-2">Expected delivery</label>
+                                                                <input type="date" id="company-column" class="form-control" name="company-column" min="2024-11-22" required />
+                                                            </div>
+
+                                                            <!-- Requested by dropdown-->
+                                                            <div class="col-md-6 col-12">
+                                                                <label for="requestedby" class="font-extrabold text-primary d-block mb-2">Requested by</label>
+                                                                <select class="form-select" id="requestedby" required>
+                                                                    <option value="" disabled selected>Select Requester Party</option>
+                                                                </select>
+                                                            </div>
+                                                            
+
+                                                        </div>
+
+
+
+
+                                                    </div>
+                                                </div>
+
+                                                
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header p-3 ms-2 ">
+                                                    Vendor Details
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row gy-3">
+                                                        <div class="col-md-6 col-12">
+                                                            
+                                                            <label for="contactperson" class="font-extrabold text-primary d-block mb-2">Contact Person</label>
+                                                            <input type="text" id="contactperson"
+                                                                class="form-control" name="email-id-column"
+                                                                placeholder="">
+                                                            
+                                                        </div>
+
+                                                        <div class="col-md-6 col-12">
+                                                            
+                                                            <label for="contactno" class="form-label font-extrabold text-primary d-block mb-2">Contact No.</label>
+                                                            <input type="text" id="contactno" class="form-control "
+                                                                name="email-id-column" >
+                                                            
+                                                        </div>
+
+                                                        <div class="col-md-6 col-12">
+                                                            <div class="">
+                                                                <label for="venloc" class="form-label font-extrabold text-primary d-block mb-2">Vendor Location</label>
+                                                                <input type="text" id="venloc" class="form-control"
+                                                                    name="email-id-column" placeholder="">
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Vendor Dropdown -->
+                                                        <div class="col-md-6 col-12 ">
+                                                            <div class="">
+                                                                <label for="vendor" class="form-label font-extrabold text-primary d-block mb-2">Vendor</label>
+                                                                <select class="form-select" id="vendor" required>
+                                                                    <option value="" disabled selected>Select Vendor</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        
+
+                                                        <div class="col-md-6 col-12 mb-3">                                                            
+                                                            <form>
+                                                                
+                                                                <label for="description" class="form-label font-extrabold text-primary">Description</label>
+                                                                <textarea class="form-control" id="description" rows="2" placeholder="Enter description here..."></textarea>
+                                                                
+                                                                
+                                                            </form>                 
+                                                        </div>
+                                                        <div class="col-md-6 col-12">                                                            
+                                                            <form>
+                                                               
+                                                                <label for="remarks" class="form-label font-extrabold text-primary">Remarks</label>
+                                                                <textarea class="form-control" id="remarks" rows="2" placeholder="Remarks (if any)..."></textarea>
+                                                                
+                                                            </form>                 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <!-- 3rd card -->
+                                            <section>
+                                                <div class="card">
+                                                    <div class="card-header p-3 ms-2">
+                                                        Material Details
+                                                    </div>
+                                                    <div class="card-body clonethis">
+                                                        <div class="row d-flex justify-content-start mb-3" id="material0">
+                                                            <div class="col-md-1 text-center font-extrabold text-primary">
+                                                                1.
+                                                            </div>
+                                            
+                                                            <div class="col-md-5">
+                                                                <label for="item" class="form-label form-label-xs font-extrabold text-primary">Item</label>
+                                                                <input type="text" class="form-control form-control-sm required" id="item" required placeholder="">
+                                                            </div>
+                                            
+                                                            <div class="col-md-3">
+                                                                <label for="quantity" class="form-label form-label-xs required font-extrabold text-primary">Quantity</label>
+                                                                <input type="number" class="form-control form-control-sm" id="quantity" required placeholder="" oninput="updateQuantityInWords()">
+                                                                <small id="quantityInWords" class="form-text text-muted"></small>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label for="unit" class="form-label font-extrabold text-primary d-block mb-2">Unit</label>
+                                                                <select class="form-select form-select-sm" id="unit" required>
+                                                                    <option value="" disabled selected></option>
+                                                                    <option value="">Units</option>
+                                                                    <option value="">Kg</option>
+                                                                    <option value="">grams</option>
+                                                                    <option value="">Litres</option>
+                                                                    <option value="">Meters</option>
+                                                                </select>
+                                                            </div>
+                                                        
+
+                                                            <!-- <hr class="my-3"> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Add new item button -->
+                                                <div class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-primary mb-1" id="addItemButton">Add Item</button>
+                                                </div>
+                                                
+                                            
+                                            </section>
+
+
+                                            <div class="col-12 d-flex justify-content-end">
+                                                <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                                <button type="reset"
+                                                    class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </section>
+            <!-- // Basic multiple Column Form section end -->
+        </div>
+
+        
+    </div>
+    </div>
+
+    <!-- JS for disabling earlier dates -->
+    <script>
+        // Set the minimum date to today
+        document.getElementById('company-column').min = new Date().toISOString().split('T')[0];
+    </script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <!--Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        #menu li {
+            padding: 0px;
+        }
+
+        #menu li a {
+            margin: 0px;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-link h6 {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 12px;
+        }
+
+        .badge {
+            position: relative;
+            top: -2px;
+            right: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="sidebar-left active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-center">
+                        <div class="logo">
+                            <a href="index.html" class="img img-fluid"><img src="assets/images/logo/elite-logo.jpg"
+                                    class="img w-100 h-75 p-1" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu" id="menu">
+
+
+                        <li class="sidebar-item active">
+                            <a href="index.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center ">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-house"></i>
+                                </div>
+                                <span>Dashboard</span>
+
+                            </a>
+                            <hr>
+                        </li>
+
+                        <li class="sidebar-item" onclick="location.href='table-datatable.html';">
+                            <a href="table-datatable.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <i class="me-3 fa fa-lg  fa-truck"></i>
+                                </div>
+                                <span>M-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='table-datatable-2.html';">
+                            <a href="table-datatable-2.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-id-card"></i>
+                                </div>
+                                <span>V-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='application-gallery.html';">
+                            <a href="application-gallery.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-layer-group"></i>
+                                </div>
+                                <span>Requests</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='form-element-select.html';">
+                            <a href="form-element-select.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center">
+                                <div>
+                                    <i class="me-2 fa fa-lg fa-clipboard"></i>
+                                </div>
+                                <span>Reports</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <!-- <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Components</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="component-alert.html">Alert</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-badge.html">Badge</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-breadcrumb.html">Breadcrumb</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-button.html">Button</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-card.html">Card</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-carousel.html">Carousel</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-dropdown.html">Dropdown</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-list-group.html">List Group</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-modal.html">Modal</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-navs.html">Navs</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-pagination.html">Pagination</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-progress.html">Progress</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-spinner.html">Spinner</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-tooltip.html">Tooltip</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading d-flex justify-content-between align-items-center">
+                <h3>Dashboard</h3>
+                <div class="d-flex align-items-center">
+                    <div class="nav-item dropdown me-2">
+                        <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <h4><i class="far fa-bell"></i></h4>
+                            <h6><span class="badge bg-primary">15</span></h6> 
+                        </a>
+                    </div>
+
+                    <div class="nav-item dropdown me-4">
+                        <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <h4><i class="far fa-envelope"></i></h4>
+                            <h6><span class="badge bg-primary">5</span></h6> 
+                        </a>
+                    </div>
+
+                    <div class="name">
+                        <h5 class="me-2 text-secondary">Admin</h5>
+                    </div>
+                    <div class="ms-2 avatar avatar-xl">
+                        <a href="login_page.html"><img src="assets/images/faces/2.jpg" alt="Face 1"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <div class="col-12 col-lg-12">
+                        <div class="row d-flex justify-content-between">
+
+                            <div class="col-6 col-lg-2 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4">
+                                        <div class="row">
+                                            <div class="col-md-4 ">
+                                                <div class="stats-icon purple">
+                                                    <i class="fa fa-id-card"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Issued</h6>
+                                                <h4 class="font-extrabold mb-0">112</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-2 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon blue">
+                                                    <i class="fa fa-person"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Visitors</h6>
+                                                <h4 class="font-extrabold mb-0">183</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-2 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon green">
+                                                    <i class="fa fa-truck"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Material</h6>
+                                                <h4 class="font-extrabold mb-0">80</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body py-2">
+                                        <div class="row d-flex justify-content-center">
+                                            
+                                            <div class="col-md-5 d-flex justify-content-center align-items-center">
+                                                <img class="img img-fluid" src="assets/images/samples/in.png"
+                                                alt="">
+                                            </div>
+                                            <div class="col-md-5 mt-3 d-flex flex-column justify-content-center align-items-center text-center">
+                                                <p>RGP <span class="badge bg-primary p-1">20</span></p>
+                                                <p>NRGP <span class="badge bg-primary p-1">36</span></p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body py-2">
+                                        <div class="row d-flex justify-content-center">
+                                            
+                                            <div class="col-md-5 d-flex justify-content-center align-items-center">
+                                                <img class="img img-fluid" src="assets/images/samples/out.png"
+                                                alt="">
+                                            </div>
+                                            <div class="col-md-5 mt-3 d-flex flex-column justify-content-center align-items-center text-center">
+                                                <p>RGP <span class="badge bg-primary p-1">28</span></p>
+                                                <p>NRGP <span class="badge bg-primary p-1">40</span></p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-6 col-lg-2 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon red">
+                                                    <i class="iconly-boldBookmark"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Non Returnable</h6>
+                                                <h6 class="font-extrabold mb-0">54</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- 2nd row -->
+                <section>
+                    <div class="row">
+                        <!-- Period bar graph -->
+                        <div class="col-md-8 col-12">
+                            <div class="card">
+                                <div class="card-header p-3 ps-4">
+                                    <i class="fa fa-clock me-2"></i><span>Period</span>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn nav-link active" id="pills-home-tab"
+                                                data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                                role="tab" aria-controls="pills-home" aria-selected="true">Week</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-profile" type="button" role="tab"
+                                                aria-controls="pills-profile" aria-selected="false">Month</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="btn nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-contact" type="button" role="tab"
+                                                aria-controls="pills-contact" aria-selected="false">Year</button>
+                                        </li>
+
+                                    </ul>
+                                    <!-- tab content -->
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <!-- week content -->
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                            aria-labelledby="pills-home-tab" tabindex="0">
+                                            <!-- bar graph -->
+                                            <div><img src="assets/images/logo/graph2.jpg" class="img img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- month content -->
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                            aria-labelledby="pills-profile-tab" tabindex="0">
+                                            <div><img src="assets/images/logo/month.jpg" class="img img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <!-- year content -->
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                            aria-labelledby="pills-contact-tab" tabindex="0">
+                                            <div><img src="assets/images/logo/year.jpg" class="img img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- pie chart -->
+                        <div class="col-md-4 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 id="piechartMonth"></h4>
+                                    <h5 class="text-muted">Material / Visitors</h5>
+                                </div>
+                                <div class="card-body " style="position: relative;height: 340px;">
+                                    <div id="chart-visitors-profile"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <span><i class="fa fa-clipboard"></i> Register wise Gatepass</span>
+                                </div>
+                                <div class="card-body">
+
+                                    <img class="img img-fluid w-100" src="assets/images/samples/graph2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header text-center bg-light p-2">
+                                    <h5>Incoming</h5>
+                                    <span class="text-muted">Today 27-Nov</span>
+                                </div>
+                                <div class="card-body text-center d-flex flex-column align-items-center p-2 mb-3">
+                                    <h1 class="text-primary">56</h1>
+                                    <div class="d-flex d-inline mt-2">Returnable:<div class="badge bg-primary ms-2"><b>20</b></div></div>
+                                    <div class="d-flex d-inline mt-3">Non-Returnable:<div class="badge bg-primary ms-2"><b>36</b></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header text-center bg-light p-2">
+                                    <h5>Outgoing</h5>
+                                    <span class="text-muted">Today 27-Nov</span>
+                                </div>
+                                <div class="card-body text-center p-2 d-flex flex-column align-items-center mb-3">
+                                    <h1 class="text-primary">74</h1>
+                                    <div class="d-flex d-inline mt-2">Returnable:<div class="badge bg-primary ms-2"><b>28</b></div></div>
+                                    <div class="d-flex d-inline mt-3">Non-Returnable:<div class="badge bg-primary ms-2"><b>40</b></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+            <script>
+                // Get the current date
+                const currentDate = new Date();
+                // Get the current month and year
+                const currMonth = currentDate.toLocaleString('default', { month: 'short' }); // 'Nov'
+                const currYear = currentDate.getFullYear(); // '2024'
+
+                // Combine month and year
+                const monthYear = `${currMonth} ${currYear}`;
+                document.getElementById('piechartMonth').innerHTML = `<strong>${monthYear}</strong>`;            
+            </script>
+
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+    <title>Digital Material Gate Pass System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.shutterstock.com/image-vector/checkpoint-on-toll-road-payment-600nw-1059258011.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5); /* Adjust the opacity here */
+            z-index: 1;
+        }
+        .login-container {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+        .title {
+            color: #000;
+            font-size: 24px;
+            margin-bottom: 60px; /* Adjusted margin to move the title up */
+            font-weight: bold;
+        }
+        .login-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 350px;
+            height: 340px;
+        }
+        .login-box h2 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        .textbox {
+            position: relative;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .textbox input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            background: #fff;
+            border: none;
+            outline: none;
+            color: #000;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .textbox i {
+            color: #00bcd4;
+            font-size: 24px;
+        }
+        .login-box a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            width: 100%;
+            background: #00bcd4;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .btn:hover {
+            background: #0097a7;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="title">Digital Material Gate Pass System</div>
+        <div class="login-box">
+            <h2>LOGIN</h2>
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="text" required placeholder="Username">
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" required placeholder="Password">
+            </div>
+            <button class="btn" onclick="location.href='index.html'">LOGIN</button>
+            <a href="#">Forgot Password ?</a>
+        </div>
+    </div>
+    <div class="footer">
+        © Magnificent Login Form. All Rights Reserved | Design By Elite Infosoft
+    </div>
+</body>
+</html>

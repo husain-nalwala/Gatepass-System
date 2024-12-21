@@ -1,0 +1,94 @@
+document.addEventListener("DOMContentLoaded", function () {
+                                                        let itemCounter = 1; // Start with the first row
+                                                        const addItemButton = document.getElementById("addItemButton");
+                                                        const materialContainer = document.querySelector(".clonethis");
+                                                
+                                                        // Function to convert number to words (extended to handle larger numbers)
+                                                        function numberToWords(num) {
+                                                            const a = [
+                                                                '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+                                                                'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
+                                                            ];
+                                                            const b = [
+                                                                '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'
+                                                            ];
+                                                            const c = [
+                                                                '', 'hundred', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion'
+                                                            ];
+                                                
+                                                            if (num === 0) return 'zero';
+                                                
+                                                            let str = '';
+                                                
+                                                            if (num >= 1000) {
+                                                                let thousands = Math.floor(num / 1000);
+                                                                str += numberToWords(thousands) + ' thousand ';
+                                                                num %= 1000;
+                                                            }
+                                                
+                                                            if (num >= 100) {
+                                                                let hundreds = Math.floor(num / 100);
+                                                                str += a[hundreds] + ' hundred ';
+                                                                num %= 100;
+                                                            }
+                                                
+                                                            if (num >= 20) {
+                                                                let tens = Math.floor(num / 10);
+                                                                str += b[tens] + ' ';
+                                                                num %= 10;
+                                                            }
+                                                
+                                                            if (num > 0) {
+                                                                str += a[num] + ' ';
+                                                            }
+                                                
+                                                            return str.trim();
+                                                        }
+                                                
+                                                        // Event listener for "Add Item" button
+                                                        addItemButton.addEventListener("click", function () {
+                                                            itemCounter++; // Increment the counter for the new item
+                                                            const newItem = document.querySelector("#material0").cloneNode(true); // Clone the first row
+                                                            newItem.id = "material" + itemCounter; // Assign a new ID to the cloned row
+                                                
+                                                            // Reset input values for the new row
+                                                            newItem.querySelector("#item").value = "";
+                                                            newItem.querySelector("#quantity").value = "";
+                                                            newItem.querySelector("#quantityInWords").textContent = "";
+                                                            newItem.querySelector("#unit").value = "";
+                                                
+                                                            // Update the serial number of the new row
+                                                            const serialNumber = newItem.querySelector(".serial-number");
+                                                            if (serialNumber) {
+                                                                serialNumber.textContent = itemCounter + '.'; // Set the serial number of the new row
+                                                            }
+                                                
+                                                            materialContainer.appendChild(newItem); // Append the new item to the container
+                                                
+                                                            // Add event listener for the quantity field to update words
+                                                            const newQuantityInput = newItem.querySelector("#quantity");
+                                                            newQuantityInput.addEventListener("input", function () {
+                                                                const quantity = parseInt(newQuantityInput.value, 10);
+                                                                const quantityInWords = newItem.querySelector("#quantityInWords");
+                                                
+                                                                if (!isNaN(quantity)) {
+                                                                    quantityInWords.textContent = `${numberToWords(quantity)}`;
+                                                                } else {
+                                                                    quantityInWords.textContent = "";
+                                                                }
+                                                            });
+                                                        });
+                                                
+                                                        // Initial event listener for the first row to update quantity in words
+                                                        const initialQuantityInput = document.querySelector("#quantity");
+                                                        initialQuantityInput.addEventListener("input", function () {
+                                                            const quantity = parseInt(initialQuantityInput.value, 10);
+                                                            const quantityInWords = document.querySelector("#quantityInWords");
+                                                
+                                                            if (!isNaN(quantity)) {
+                                                                quantityInWords.textContent = `${numberToWords(quantity)}`;
+                                                            } else {
+                                                                quantityInWords.textContent = "";
+                                                            }
+                                                        });
+                                                    });

@@ -1,0 +1,51 @@
+The Dashboard page will display the count of 
+
+Visitor Pass
+Material Pass
+issued for a Day
+
+Returnable and Non Returnable counts are also displayed
+
+Gate passes can also be categorised based on Asset Registers. e.g Consumables or Capital Goods 
+
+
+========================================
+
+Dashboard
+Requests
+Visitors
+Material
+Reports
+
+
+================================
+Requests section will allow authorised users to place a request
+for any incoming or outgoing material with a supporting purchase order number or Invoice details.
+Line item details can then be fetched from any Custom ERP module.
+
+This will help in reducing the time to issue a pass on the Gate.
+
+================================
+
+
+===================
+All the materials that are taken IN or OUT whether 
+REturnable or Non Returnable are displayed here and can be sorted
+based on status
+
+===================
+
+
+All the Visitor Movement IN or OUT is tracked in this module
+
+
+==============
+New Pass
+
+This screen allows you to generate a new Pass either Visitor or Material by filling the requisite details
+
+
+
+
+
+

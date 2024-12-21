@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatepass Form</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <!-- Add Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html" class="w-100 h-100"><img src="assets/images/logo/elite-logo.jpg"
+                                    class="img img-fluid w-100 h-75 p-1" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-item active" onclick="location.href='index.html';">
+                            <a href="index.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-house"></i>
+                                </div>
+                                <span>Dashboard</span>
+
+                            </a>
+                            <hr>
+                        </li>
+
+                        <li class="sidebar-item" onclick="location.href='table-datatable.html';">
+                            <a href="table-datatable.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg  fa-truck"></i>
+                                </div>
+                                <span>M-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='table-datatable-2.html';">
+                            <a href="table-datatable-2.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-id-card"></i>
+                                </div>
+                                <span>V-Pass</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='application-gallery.html';">
+                            <a href="application-gallery.html"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-3 fa fa-lg fa-layer-group"></i>
+                                </div>
+                                <span>Requests</span>
+                            </a>
+                            <hr>
+                        </li>
+                        <li class="sidebar-item" onclick="location.href='#';">
+                            <a href="#"
+                                class="btn sidebar-link d-flex flex-column align-items-center justify-content-center mb-3">
+                                <div>
+                                    <i class="me-2 fa fa-lg fa-clipboard"></i>
+                                </div>
+                                <span>Reports</span>
+                            </a>
+                            <hr>
+                        </li>
+
+                        <!-- <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-stack"></i>
+                                <span>Components</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="component-alert.html">Alert</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-badge.html">Badge</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-breadcrumb.html">Breadcrumb</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-button.html">Button</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-card.html">Card</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-carousel.html">Carousel</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-dropdown.html">Dropdown</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-list-group.html">List Group</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-modal.html">Modal</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-navs.html">Navs</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-pagination.html">Pagination</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-progress.html">Progress</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-spinner.html">Spinner</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-tooltip.html">Tooltip</a>
+                                </li>
+                            </ul>
+                        </li> -->
+
+
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+
+                        <div class="col-12 col-md-12 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Material pass</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="cardhere ">
+
+
+                                <div class=" d-flex justify-content-between align-items-center p-0">
+                                    <h4 class="card-title mb-0 ms-2">Material Pass:</h4>
+                                    <div class="card">
+                                        <div class="card-body d-flex flex-column p-2  align-items-center">
+                                            <span id="generated-id"></span> <!-- This will display the generated ID -->
+                                            <div id="current-date" class=""></div>
+                                        </div>
+                                        <!-- This will display the current date below the Pass ID -->
+                                    </div>
+                                </div>
+
+                                <script>
+
+                                </script>
+
+                                <style>
+                                    /* Styling for the pass-type container */
+                                    #pass-type {
+                                        text-align: center;
+                                        /* Center the text horizontally */
+                                        font-size: 16px;
+                                        /* Set font size for both ID and Date */
+                                    }
+
+                                    /* Styling for the generated Pass ID */
+                                    #generated-id {
+                                        font-weight: bold;
+                                        /* Make the ID bold */
+                                        display: inline-block;
+                                        /* Ensure it stays in the same line with the label */
+                                        margin-top: 5px;
+                                        /* Space between the label and the ID */
+                                    }
+
+                                    /* Styling for the Date */
+                                    #current-date {
+                                        font-size: 14px;
+                                        color: #6c757d;
+                                        /* Light gray color for the date */
+                                        display: inline-block;
+                                        /* Ensure the date is on its own line */
+                                        margin-top: 8px;
+                                        /* Space between the Pass ID and the Date */
+                                    }
+                                </style>
+
+
+
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form">
+                                            <div class="row">
+                                                <!-- incoming outgoing radio -->
+                                                <!-- <div class="col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="">Pass type: </label>
+                                                        <input class="form-check-input ms-2" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault1" />
+                                                        <label class="form-check-label" for="flexRadioDefault1">Incoming</label>
+
+                                                        <input class="form-check-input ms-2" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault2" />
+                                                        <label class="form-check-label" for="flexRadioDefault2">Outgoing</label>
+                                                    </div>
+                                                </div> -->
+
+
+                                                <div class="card">
+                                                    <div class="card-header p-3 ms-2">
+                                                        Basic details
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row gy-3 my-2 mb-4">
+                                                            <!-- Movement Selection -->
+                                                            <div class="col-md-12 col-12">
+                                                                <label for="movement"
+                                                                    class="form-label font-extrabold text-primary me-2">Select
+                                                                    Pass type</label>
+
+                                                                <!-- Inward/Outward radio buttons -->
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="movement" id="inwardRadio" value="inward">
+                                                                    <label class="form-check-label"
+                                                                        for="inwardRadio">Inward</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="movement" id="outwardRadio"
+                                                                        value="outward">
+                                                                    <label class="form-check-label"
+                                                                        for="outwardRadio">Outward</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Pass Type Selection -->
+                                                            <div class="col-md-12 col-12" id="passtypeDiv"
+                                                                style="display: none;">
+                                                                <label for="passtype"
+                                                                    class="form-label font-extrabold text-primary me-2">Select
+                                                                    Category</label>
+
+                                                                <!-- Under PO / Non PO radio buttons -->
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="passtype" id="underPORadio"
+                                                                        value="underPO">
+                                                                    <label class="form-check-label"
+                                                                        for="underPORadio">Under PO</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="passtype" id="nonPORadio" value="nonPO">
+                                                                    <label class="form-check-label" for="nonPORadio">Non
+                                                                        PO</label>
+                                                                </div>
+
+                                                                <!-- Additional Fields (Only shown when "Under PO" is selected) -->
+                                                                <div id="poNumberDiv" style="display: none;">
+                                                                    <div class="row gy-3">
+                                                                        <!-- Mode of Transport Dropdown -->
+                                                                        <div class="col-md-6 col-12">
+                                                                            <label for="modeOfTransport"
+                                                                                class="form-label">Mode of
+                                                                                Transport</label>
+                                                                            <select class="form-select"
+                                                                                id="modeOfTransport"></select>
+                                                                        </div>
+
+                                                                        <!-- E-Way Bill Number -->
+                                                                        <div class="col-md-6 col-12">
+                                                                            <label for="ewayBillNumber"
+                                                                                class="form-label">E-Way Bill
+                                                                                Number</label>
+                                                                            <input class="form-control" type="text"
+                                                                                id="ewayBillNumber"
+                                                                                placeholder="Enter E-Way Bill Number">
+                                                                        </div>
+
+                                                                        <!-- GST Invoice Number -->
+                                                                        <div class="col-md-6 col-12">
+                                                                            <label for="gstInvoiceNumber"
+                                                                                class="form-label">GST Invoice
+                                                                                Number</label>
+                                                                            <input class="form-control" type="text"
+                                                                                id="gstInvoiceNumber"
+                                                                                placeholder="Enter GST Invoice Number">
+                                                                        </div>
+
+                                                                        <!-- Scanned Copy of the Invoice -->
+                                                                        <div class="col-md-6 col-12">
+                                                                            <label for="scannedInvoice"
+                                                                                class="form-label">Scanned Copy of the
+                                                                                Invoice</label>
+                                                                            <input class="form-control" type="file"
+                                                                                id="scannedInvoice"
+                                                                                accept="image/*,application/pdf">
+                                                                        </div>
+
+                                                                        <!-- Estimated Delivery Date -->
+                                                                        <div class="col-md-6 col-12">
+                                                                            <label for="estimatedDeliveryDate"
+                                                                                class="form-label">Estimated Delivery
+                                                                                Date</label>
+                                                                            <input class="form-control" type="date"
+                                                                                id="estimatedDeliveryDate">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row gy-3">
+                                                            <!-- Category dropdown -->
+                                                            <div class="col-md-6 col-12">
+                                                                <label for="category"
+                                                                    class="form-label font-extrabold text-primary">Movement</label>
+                                                                <select class="form-select" id="category"></select>
+                                                            </div>
+
+                                                            <!-- Vehicle No. -->
+                                                            <div class="col-md-6 col-12">
+                                                                <label for="vehicleNo"
+                                                                    class="form-label font-extrabold text-primary">Vehicle
+                                                                    No.</label>
+                                                                <input type="text" id="vehicleNo" class="form-control"
+                                                                    name="vehicleNo">
+                                                            </div>
+
+                                                            <!-- Expected Delivery Date -->
+                                                            <div class="col-md-6 col-12">
+                                                                <label for="expectedDelivery"
+                                                                    class="form-label font-extrabold text-primary">Expected
+                                                                    Delivery</label>
+                                                                <input type="date" id="expectedDelivery"
+                                                                    class="form-control" min="2024-11-22" required />
+                                                            </div>
+
+                                                            <!-- Requested By dropdown -->
+                                                            <div class="col-md-6 col-12">
+                                                                <label for="requestedBy"
+                                                                    class="form-label font-extrabold text-primary">Requested
+                                                                    by</label>
+                                                                <select class="form-select" id="requestedBy"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <script>
+                                                    // Fetch the JSON data
+                                                    fetch('inward.json')
+                                                        .then(response => response.json())
+                                                        .then(data => {
+                                                            // Populate the Category dropdown
+                                                            const categorySelect = document.getElementById('category');
+                                                            data.category.forEach(item => {
+                                                                const option = document.createElement('option');
+                                                                option.value = item.value;
+                                                                option.textContent = item.label;
+                                                                categorySelect.appendChild(option);
+                                                            });
+
+                                                            // Populate the Mode of Transport dropdown
+                                                            const modeOfTransportSelect = document.getElementById('modeOfTransport');
+                                                            data.modeOfTransport.forEach(item => {
+                                                                const option = document.createElement('option');
+                                                                option.value = item.value;
+                                                                option.textContent = item.label;
+                                                                modeOfTransportSelect.appendChild(option);
+                                                            });
+
+                                                            // Populate the Requested By dropdown
+                                                            const requestedBySelect = document.getElementById('requestedBy');
+                                                            data.requestedBy.forEach(item => {
+                                                                const option = document.createElement('option');
+                                                                option.value = item.value;
+                                                                option.textContent = item.label;
+                                                                requestedBySelect.appendChild(option);
+                                                            });
+                                                        })
+                                                        .catch(error => {
+                                                            console.error('Error fetching the JSON data:', error);
+                                                        });
+
+                                                    // Function to toggle the visibility of the pass type and PO number input
+                                                    function togglePassTypeInput() {
+                                                        const inwardRadio = document.getElementById('inwardRadio');
+                                                        const passtypeDiv = document.getElementById('passtypeDiv');
+
+                                                        // Show the Pass Type section only if "Inward" is selected
+                                                        if (inwardRadio.checked) {
+                                                            passtypeDiv.style.display = 'block';
+                                                        } else {
+                                                            passtypeDiv.style.display = 'none';
+                                                        }
+
+                                                        // Hide the PO number input by default when changing selection
+                                                        document.getElementById('poNumberDiv').style.display = 'none';
+                                                    }
+
+                                                    // Function to show/hide the PO input and additional fields when "Under PO" or "Non PO" is selected
+                                                    function togglePOInput() {
+                                                        const underPORadio = document.getElementById('underPORadio');
+                                                        const poNumberDiv = document.getElementById('poNumberDiv');
+
+                                                        // Show PO input and additional fields if "Under PO" is selected, hide them if "Non PO" is selected
+                                                        if (underPORadio.checked) {
+                                                            poNumberDiv.style.display = 'block';
+                                                        } else {
+                                                            poNumberDiv.style.display = 'none';
+                                                        }
+                                                    }
+
+                                                    // Event listeners for the radio buttons
+                                                    document.getElementById('inwardRadio').addEventListener('change', togglePassTypeInput);
+                                                    document.getElementById('outwardRadio').addEventListener('change', togglePassTypeInput);
+                                                    document.getElementById('underPORadio').addEventListener('change', togglePOInput);
+                                                    document.getElementById('nonPORadio').addEventListener('change', togglePOInput);
+
+                                                    // Initial call to ensure everything is set correctly based on the default selection
+                                                    togglePassTypeInput();
+                                                </script>
+
+
+                                                <div class="card">
+                                                    <div class="card-header p-3 ms-2 ">
+                                                        Vendor Details
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row gy-3">
+                                                            <div class="col-md-6 col-12">
+
+                                                                <label for="contactperson"
+                                                                    class="font-extrabold text-primary d-block mb-2">Contact
+                                                                    Person</label>
+                                                                <input type="text" id="contactperson"
+                                                                    class="form-control" name="email-id-column"
+                                                                    placeholder="">
+
+                                                            </div>
+
+                                                            <div class="col-md-6 col-12">
+
+                                                                <label for="contactno"
+                                                                    class="form-label font-extrabold text-primary d-block mb-2">Contact
+                                                                    No.</label>
+                                                                <input type="text" id="contactno" class="form-control "
+                                                                    name="email-id-column">
+
+                                                            </div>
+
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="">
+                                                                    <label for="venloc"
+                                                                        class="form-label font-extrabold text-primary d-block mb-2">Vendor
+                                                                        Location</label>
+                                                                    <input type="text" id="venloc" class="form-control"
+                                                                        name="email-id-column" placeholder="">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Vendor Dropdown -->
+                                                            <div class="col-md-6 col-12 ">
+                                                                <div class="">
+                                                                    <label for="vendor"
+                                                                        class="form-label font-extrabold text-primary d-block mb-2">Vendor</label>
+                                                                    <select class="form-select" id="vendor" required>
+                                                                        <option value="" disabled selected>Select Vendor
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="col-md-6 col-12 mb-3">
+                                                                <form>
+
+                                                                    <label for="description"
+                                                                        class="form-label font-extrabold text-primary">Description</label>
+                                                                    <textarea class="form-control" id="description"
+                                                                        rows="2"
+                                                                        placeholder="Enter description here..."></textarea>
+
+
+                                                                </form>
+                                                            </div>
+                                                            <div class="col-md-6 col-12">
+                                                                <form>
+
+                                                                    <label for="remarks"
+                                                                        class="form-label font-extrabold text-primary">Remarks</label>
+                                                                    <textarea class="form-control" id="remarks" rows="2"
+                                                                        placeholder="Remarks (if any)..."></textarea>
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                                <!-- 3rd card -->
+                                                <section>
+                                                    <div class="card">
+                                                        <div class="card-header p-3 ms-2">
+                                                            Material Details
+                                                        </div>
+                                                        <div class="card-body clonethis">
+                                                            <div class="row d-flex justify-content-start mb-3"
+                                                                id="material0">
+                                                                <!-- Serial number for each row -->
+                                                                <div
+                                                                    class="col-md-1 text-center font-extrabold text-primary serial-number">
+                                                                    1.
+                                                                </div>
+
+                                                                <div class="col-md-2">
+                                                                    <label for="type"
+                                                                        class="form-label form-label-xs font-extrabold text-primary">Type</label>
+                                                                    <select id="type"
+                                                                        class="form-select form-select-sm required"
+                                                                        required>
+                                                                        <option value="" disabled selected>Select a type
+                                                                        </option>
+                                                                        <option value="item">Item</option>
+                                                                        <option value="consumable">Asset</option>
+                                                                        <option value="non-consumable">Consumable
+                                                                        </option>
+                                                                        <option value="non-consumable">Raw Material
+                                                                        </option>
+                                                                        <option value="non-consumable">Finished Goods
+                                                                        </option>
+                                                                        <option value="non-consumable">Samples</option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <label for="description"
+                                                                        class="form-label form-label-xs font-extrabold text-primary">Description</label>
+                                                                    <textarea id="description"
+                                                                        class="form-control form-control-sm required"
+                                                                        rows="1" required></textarea>
+                                                                </div>
+
+                                                                <div class="col-md-2">
+                                                                    <label for="quantity"
+                                                                        class="form-label form-label-xs required font-extrabold text-primary">Quantity</label>
+                                                                    <input type="number"
+                                                                        class="form-control form-control-sm quantity"
+                                                                        id="quantity" required>
+                                                                    <small id="quantityInWords"
+                                                                        class="form-text text-muted"></small>
+                                                                </div>
+
+                                                                <div class="col-md-1">
+                                                                    <label for="unit"
+                                                                        class="form-label font-extrabold text-primary d-block mb-2">UOM</label>
+                                                                    <input type="text" id="unit"
+                                                                        class="form-control form-control-sm">
+                                                                </div>
+
+                                                                <!-- amount -->
+                                                                <div class="col-md-2">
+                                                                    <label for="quantity"
+                                                                        class="form-label form-label-xs required font-extrabold text-primary">Amount</label>
+                                                                    <input type="number"
+                                                                        class="form-control form-control-sm quantity"
+                                                                        id="amount" required>
+                                                                    <small id="amountInWords"
+                                                                        class="form-text text-muted"></small>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Item container (where cloned items will be added) -->
+                                                        <div class="item-container"></div>
+
+                                                        <!-- Add new item button -->
+                                                        <div class="d-flex p-3 justify-content-end">
+                                                            <button type="button" class="btn btn-primary mb-1"
+                                                                id="addItemButton">Add Item</button>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                                <script>
+                                                    document.addEventListener('DOMContentLoaded', function () {
+                                                        const addItemButton = document.getElementById('addItemButton');
+                                                        const clonethis = document.querySelector('.clonethis');  // The div you want to clone
+                                                        const itemContainer = document.querySelector('.item-container'); // Container where cloned items will be added
+                                                        let serialNumber = 2;  // Initialize serial number to 1
+
+                                                        addItemButton.addEventListener('click', function () {
+                                                            // Clone the div
+                                                            const newItem = clonethis.cloneNode(true); // Clone the div with all its contents
+
+                                                            // Get the cloned fields
+                                                            const quantityInput = newItem.querySelector('#quantity');
+                                                            const amountInput = newItem.querySelector('#amount');
+                                                            const serialNumberElement = newItem.querySelector('.serial-number');  // Find the serial number element in the cloned item
+
+                                                            // Update serial number in the cloned item
+                                                            serialNumberElement.textContent = serialNumber + ".";  // Set the serial number
+
+                                                            // Increment the serial number for the next item
+                                                            serialNumber++;
+
+                                                            // Clear all input values in the cloned item
+                                                            newItem.querySelectorAll('input, textarea').forEach(input => input.value = '');
+
+                                                            // Ensure the small elements are targeted correctly for the cloned fields
+                                                            const quantityInWordsElement = newItem.querySelector('#quantityInWords');
+                                                            const amountInWordsElement = newItem.querySelector('#amountInWords');
+
+                                                            // Add number-to-words conversion for Quantity and Amount fields
+                                                            quantityInput.addEventListener('input', function () {
+                                                                const quantityInWords = numberToWords(quantityInput.value);
+                                                                quantityInWordsElement.textContent = `In words: ${quantityInWords}`;
+                                                            });
+
+                                                            amountInput.addEventListener('input', function () {
+                                                                const amountInWords = numberToWords(amountInput.value);
+                                                                amountInWordsElement.textContent = `In words: ${amountInWords}`;
+                                                            });
+
+                                                            // Append the cloned item to the item container
+                                                            itemContainer.appendChild(newItem);
+                                                        });
+
+                                                        // Function to convert numbers to words (supports numbers up to 999)
+                                                        function numberToWords(amount) {
+                                                            const words = [
+                                                                '', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine',
+                                                                'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'
+                                                            ];
+                                                            const tens = [
+                                                                '', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'
+                                                            ];
+
+                                                            // Convert the amount to a number
+                                                            const num = Number(amount);
+
+                                                            if (isNaN(num)) return '';  // Return an empty string if not a valid number
+                                                            if (num === 0) return 'Zero';
+
+                                                            // Handle numbers below 20 directly
+                                                            if (num < 20) {
+                                                                return words[num];
+                                                            }
+
+                                                            // Handle numbers from 20 to 99
+                                                            if (num < 100) {
+                                                                return tens[Math.floor(num / 10)] + (num % 10 !== 0 ? ' ' + words[num % 10] : '');
+                                                            }
+
+                                                            // Handle numbers from 100 to 999 (basic)
+                                                            if (num < 1000) {
+                                                                return words[Math.floor(num / 100)] + ' Hundred' + (num % 100 !== 0 ? ' and ' + numberToWords(num % 100) : '');
+                                                            }
+
+                                                            return 'Number too large'; // For numbers beyond 999
+                                                        }
+                                                    });
+
+
+
+
+
+                                                </script>
+
+
+
+                                                <div class="col-12 d-flex justify-content-end">
+                                                    <button type="submit"
+                                                        class="btn btn-primary me-1 mb-1">Submit</button>
+                                                    <button type="reset"
+                                                        class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Basic multiple Column Form section end -->
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- JS for disabling earlier dates -->
+    <script>
+        // Set the minimum date to today
+        document.getElementById('company-column').min = new Date().toISOString().split('T')[0];
+    </script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
